@@ -5,9 +5,7 @@ const getData = async (pinCode) => {
   try {
     const [ month, date, year ] = new Date().toLocaleString().split(',')[0].split('/');
     const url = `${process.env.API}${pinCode}&date=${date}-${month}-${year}`;
-    const response  = await axios.get(url, { headers: { 
-      'User-Agent': process.env.USER_AGENT
-    }});
+    const response  = await axios.get(url);
   
     const centers = response.data.centers;
   
