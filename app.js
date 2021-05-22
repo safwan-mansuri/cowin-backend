@@ -15,7 +15,7 @@ app.use(express.json());
 app.use(cors())
 
 mongoose.connect(process.env.URI, { useNewUrlParser: true, useUnifiedTopology: true})
-  .then((result) => {app.listen(5000)})
+  .then((result) => {app.listen( process.env.PORT || 5000)})
   .catch((err) => {console.log(err)});
 
 app.post('/', async (req, res) => {
