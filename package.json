@@ -1,0 +1,26 @@
+{
+  "name": "cowin-backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon app.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "cors": "^2.8.5",
+    "dotenv": "^9.0.2",
+    "express": "^4.17.1",
+    "messaging-api-telegram": "^1.0.4",
+    "mongoose": "^5.12.10",
+    "node-telegram-bot-api": "^0.53.0",
+    "nodemon": "^2.0.7",
+    "smpp": "^0.5.0",
+    "telegraf": "^4.3.0",
+    "textbelt": "^0.0.4",
+    "twilio": "^3.63.0",
+    "web-push": "^3.4.4"
+  }
+}
