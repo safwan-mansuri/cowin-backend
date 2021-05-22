@@ -6,7 +6,8 @@ const getData = async (pinCode) => {
     const [ month, date, year ] = new Date().toLocaleString().split(',')[0].split('/');
     const url = `${process.env.API}${pinCode}&date=${date}-${month}-${year}`;
     const response  = await axios.get(url, { headers: { 
-      'origin': "https://www.cowin.gov.in"
+      Host: 'cdn-api.co-vin.in',
+      'User-Agent': process.env.USER_AGENT
     }});
   
     const centers = response.data.centers;
