@@ -8,6 +8,7 @@ const checkUpdate = async (cowinData) => {
     cowinData.forEach(async (currentData) => {
       console.log(currentData);
       const newData = await getData(currentData.pinCode);
+      console.log(newData)
       newData.pinCode = currentData.pinCode;
         if (newData.vaccineTotal !== currentData.vaccineTotal) {
           console.log('update !!!');

@@ -6,19 +6,7 @@ const cowinSchema = new Schema({
     type: String,
     required: true
   },
-  centers: {
-    type: String,
-    required: true
-  },
   vaccineTotal: {
-    type: Number,
-    required: true
-  },
-  doseOne: {
-    type: Number,
-    required: true
-  },
-  doseTwo: {
     type: Number,
     required: true
   },
