@@ -50,10 +50,10 @@ app.post('/', async (req, res) => {
 app.post('/update', async (req, res) => {
   try {
     const cowinData = await Cowin.find();
-    await checkUpdate(cowinData);
+    const totalUpdate = await checkUpdate(cowinData);
     const response = {
       statusCode: 200,
-      body: { message: 'check update successfully !!!' }
+      body: { message: `check update successfully ${totalUpdate}!!!` }
     }
     return res.send(response);
   } catch (err) {
